@@ -1,5 +1,5 @@
 
-DROP TABLE  IF EXISTS students;
+DROP TABLE IF EXISTS students;
 DROP TABLE IF EXISTS cohorts;
 
 CREATE TABLE cohorts (
