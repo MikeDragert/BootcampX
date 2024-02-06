@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS teachers;
 DROP TABLE IF EXISTS assistance_requests;
+DROP TABLE IF EXISTS teachers;
 
 CREATE TABLE teachers(
   id SERIAL PRIMARY KEY NOT NULL,
@@ -14,9 +14,9 @@ CREATE TABLE assistance_requests(
   student_id INTEGER REFERENCES students(id) ON DELETE CASCADE,
   teacher_id INTEGER REFERENCES teachers(id) ON DELETE CASCADE,
   assignment_id INTEGER REFERENCES assignments(id) ON DELETE CASCADE,
-  created_at DATE,
-  started_at DATE,
-  completed_at DATE,
+  created_at TIMESTAMP,
+  started_at TIMESTAMP,
+  completed_at TIMESTAMP,
   student_feedback TEXT,
   teacher_feedback TEXT
 );
